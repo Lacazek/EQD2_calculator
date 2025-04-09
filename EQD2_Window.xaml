@@ -1,0 +1,15 @@
+﻿<Window x:Class="checkHU_lung.EQD2_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:helix="clr-namespace:HelixToolkit.Wpf;assembly=HelixToolkit.Wpf"
+        xmlns:local="clr-namespace:EQD2_Calculator"      
+        mc:Ignorable="d"
+        Title="EQD2_Window" Height="450" Width="800">
+    <Grid>
+        <helix:HelixViewport3D Name="helixViewport" Background="Black">
+            <helix:SunLight/>
+        </helix:HelixViewport3D>
+    </Grid>
+</Window>
