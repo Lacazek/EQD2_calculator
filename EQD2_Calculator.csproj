@@ -7,7 +7,7 @@
     <OutputType>library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>checkHU_lung</RootNamespace>
-    <AssemblyName>EQD2_CalculatorV1.0.110.esapi</AssemblyName>
+    <AssemblyName>EQD2_CalculatorV1.0.134.esapi</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -101,7 +101,6 @@
     <Compile Include="main.cs" />
     <Compile Include="model.cs" />
     <Compile Include="ProgressWindow.cs" />
-    <Compile Include="Trash.cs" />
     <Compile Include="VoxelData.cs" />
   </ItemGroup>
   <ItemGroup>

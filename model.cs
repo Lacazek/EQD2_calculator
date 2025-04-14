@@ -51,6 +51,7 @@ namespace EQD2_Calculator
             copy.Comment = "EQD2 Automatique";
             var oldDose = exPlan.Dose;
 
+
             List<Beam> beams = copy.Beams.ToList();
             for (int i = 0; i < beams.Count; i++)
             {
@@ -68,8 +69,11 @@ namespace EQD2_Calculator
             var resY = copiedDose.YRes;
             var resZ = copiedDose.ZRes;
 
-            //double rescalefactor = copiedDose.DoseMax3D.Dose / EQD2(oldDose.DoseMax3D.Dose);
-            double rescalefactor = 1.154 / 48.1051025;
+            double rescalefactor = copiedDose.DoseMax3D.Unit == DoseValue.DoseUnit.cGy ? copiedDose.DoseMax3D.Dose/100 : copiedDose.DoseMax3D.Dose / EQD2(oldDose.DoseMax3D.Dose);
+
+            //double rescalefactor = 1.154 / 48.1051025;
+            //double rescalefactor = 7.07e-5;
+
 
             var progressWindow = new ProgressWindow(Zsize);
             progressWindow.Show();
@@ -93,17 +97,18 @@ namespace EQD2_Calculator
 
                             double dose = EQD2(copiedDose.GetDoseToPoint(position).Dose * 100);
 
-                            plane[i, j] = (int)(dose/rescalefactor);
-
+                            if (dose > 0)
+                                plane[i, j] = (int)(dose / rescalefactor);
+                            else
+                                plane[i,j] = 0;
                         }
-
                         catch
                         { }
                     }
                 }
                 copiedDose.SetVoxels(k, plane);
-
             }
+            //copy.SetPrescription(1, new DoseValue(EQD2(exPlan.TotalDose.Dose), DoseValue.DoseUnit.Gy), 1);
             progressWindow.Close();
         }
 

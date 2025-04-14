@@ -40,8 +40,6 @@ public class ProgressWindow : Window
 
     public void UpdateProgress(int value)
     {
-        //Dispatcher.Invoke(() =>
-
         progressBar.Value = value;
         progressText.Text = $"{value}%";
 
