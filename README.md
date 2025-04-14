@@ -1,1 +1,1 @@
-
+This code is intended to programmatically generate an EQD2 dose map within the Eclipse treatment planning system by processing voxel-level dose data and applying the EQD2 conversion based on the actual dose per fraction received by each voxel.
