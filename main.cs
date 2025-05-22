@@ -17,12 +17,10 @@ namespace VMS.TPS
         public void Execute(ScriptContext context)
         {
             context.Patient.BeginModifications();
-            #region Verification de l'existence des données et déclaration des variables
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             model _model = new model(context);         
             stopwatch.Stop();
-            #endregion
         }
     }
 }
