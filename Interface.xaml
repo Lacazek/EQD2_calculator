@@ -29,17 +29,17 @@
         <TextBlock  Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="1"  Grid.ColumnSpan="3" TextAlignment="Center" FontSize="16" Margin="21,0,31,0" Height="40" FontStyle="Italic"><Run Text="Par défaut, le script "/><Run Text="calcul la dose équivalente à 2Gy/fraction par vox"/><Run Text="el."/><LineBreak/><Run/></TextBlock>
 
         <TextBox x:Name="AlphaBeta" HorizontalAlignment="Center" Height="17"  Grid.Row="4" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="53" TextChanged="TextBox_TextChanged" Grid.ColumnSpan="2"/>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Center" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Center" Width="330" FontSize="16" Height="50"><Run Text="Rapport α"/><Run Text="/β à utiliser pour le calcul ("/><Run Language="fr-fr" Text="2 par défaut)"/></TextBlock>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Center" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Center" Width="330" FontSize="16" Height="50"><Run Text="Rapport α"/><Run Text="/β à utiliser pour le calcul ("/><Run Text="2"/><Run Language="fr-fr" Text=","/><Run Text=" par défaut)"/></TextBlock>
 
-        <CheckBox x:Name="CheckBox_EQD2" Content="EQD2 strict" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Stretch"  VerticalAlignment="center" Unchecked="CheckBox_UnChecked" Checked="CheckBox_Checked"/>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Center" Width="334" Height="64" FontSize="16"><Run Text="Avec ce mode On, "/><Run Language="fr-fr" Text="l'EQD2 est calculé par rapport au fractionnement du plan et appliqué à chaque voxel"/><Run Text="."/><LineBreak/><Run/></TextBlock>
+        <CheckBox x:Name="CheckBox_EQD2" Content="EQD2 Voxel" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Stretch"  VerticalAlignment="center" Unchecked="CheckBox_UnChecked" Checked="CheckBox_Checked"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Center" Width="334" Height="50" FontSize="16"><Run Text="Avec ce mode On, "/><Run Text="l'EQD2 est calculé par rapport au fractionnement "/><Run Language="fr-fr" Text="réel"/><Run Text=" à chaque voxel"/><Run Text="."/><LineBreak/><Run/></TextBlock>
 
         <CheckBox x:Name="CheckBox_BED" Content="BED" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Stretch"  VerticalAlignment="center" Unchecked="CheckBox_UnChecked_1" Checked="CheckBox_Checked_1"/>
         <TextBlock Grid.Column="2" HorizontalAlignment="Center" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Center" Width="330" FontSize="16"><Run Text="Avec ce mode On, le script calcul le p"/><Run Text="lan"/><Run Text=" "/><Run Language="fr-fr" Text="BED."/></TextBlock>
 
         <Button Grid.Column="3" Content="OK"  Grid.Row="7"  Height="21"  VerticalAlignment="Center" Background="#FF88F163" Click="Button_Click"/>
 
-        <Image Grid.Column="1"  HorizontalAlignment="Stretch" Height="80" Grid.Row="0" VerticalAlignment="Stretch" Width="100" Source="B:\RADIOTHERAPIE\Killian\Dosi\Script\EDQ2_calculator\fisherMan4.png"/>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Center" Height="21" Grid.Row="7" TextWrapping="Wrap" VerticalAlignment="Center" Width="304" ><Run Text="T"/><Run Text="emps total toutes options inclus"/><Run Text=" "/><Run Text="~"/><Run Text=" "/><Run Language="fr-fr" Text="quelques secondes"/></TextBlock>
+        <Image Grid.Column="1"  HorizontalAlignment="Stretch" Height="80" Grid.Row="0" VerticalAlignment="Stretch" Width="100" Source="B:\RADIOTHERAPIE\Killian\Dosi\Script\1.fini\EDQ2_calculator\fisherMan4.png"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Center" Height="21" Grid.Row="7" TextWrapping="Wrap" VerticalAlignment="Center" Width="304" ><Run Text="T"/><Run Text="emps total toutes options inclus"/><Run Text=" "/><Run Text="~"/><Run Text=" "/><Run Text="quelques secondes"/></TextBlock>
     </Grid>
 </Window>
